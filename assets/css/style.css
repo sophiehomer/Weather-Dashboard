@@ -1,3 +1,7 @@
+* {
+box-sizing: border-box;
+  }
+
 nav {
 font-size: 40px;
 display: flex;
@@ -6,15 +10,67 @@ background-image: linear-gradient(to right, lightblue, rgb(97, 154, 230));
 justify-content: center;
 }
 
-.search-btn {
+.search-btn {  
 margin-top: 10px;
 background-color: rgb(97, 154, 230);
 color: white;
 border: none;
-border-radius: 5px
+border-radius: 5px;
+padding-left: 77px;
+padding-right: 77px;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+.search-btn:hover {
+background-image: linear-gradient(lightblue, rgb(97, 154, 230));
+
 }
 
 .search-field {
 margin-top: 15px;
-margin-left: 15px;
+margin-left: 10px;
+margin-bottom: 30px;
+}
+
+.city-btn {
+color: white;
+background-color: rgb(97, 154, 230);
+border: none;
+border-radius: 5px;
+margin-left: 10px;
+margin-bottom: 5px;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+.city-btn:hover {
+background-image: linear-gradient(lightblue, rgb(97, 154, 230));
+}
+ 
+.container-fluid {
+display: flex;
+margin-top: 20px;
+}
+
+h1 {
+font-size: 30px;
+}
+
+h2 {
+font-size: 20px;
+margin-left: 30px;
+}
+
+.card {
+/* border:none; */
+padding-left: 15px;
+padding-right: 15px;
+
+
+   
+}
+
+.card p {
+    margin-left:0px ;
 }
