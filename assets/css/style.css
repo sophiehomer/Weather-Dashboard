@@ -1,0 +1,20 @@
+nav {
+font-size: 40px;
+display: flex;
+color: white;
+background-image: linear-gradient(to right, lightblue, rgb(97, 154, 230));
+justify-content: center;
+}
+
+.search-btn {
+margin-top: 10px;
+background-color: rgb(97, 154, 230);
+color: white;
+border: none;
+border-radius: 5px
+}
+
+.search-field {
+margin-top: 15px;
+margin-left: 15px;
+}
