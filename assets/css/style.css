@@ -16,9 +16,7 @@ background-color: rgb(97, 154, 230);
 color: white;
 border: none;
 border-radius: 5px;
-padding-left: 77px;
-padding-right: 77px;
-padding-top: 5px;
+width: 100%;
 padding-bottom: 5px;
 }
 
@@ -40,8 +38,7 @@ border: none;
 border-radius: 5px;
 margin-left: 10px;
 margin-bottom: 5px;
-padding-top: 5px;
-padding-bottom: 5px;
+width: 100%;
 }
 
 .city-btn:hover {
