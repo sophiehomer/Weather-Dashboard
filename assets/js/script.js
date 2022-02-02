@@ -1,6 +1,9 @@
 /* -------------------------------- Variables ------------------------------- */
-var city = document.getElementById("search-city").value;
-var weatherUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=34.053345&lon=-118.242349&exclude=current,minutely,hourly,alerts&appid=0255c5995a7668330428d0c738d5fc29"
+var city;
+var lat = 34.053345;
+var lon = -118.242349;
+var apiKey = "0255c5995a7668330428d0c738d5fc29";
+var weatherUrl = `https://api.openweathermap.org`
 
 var fetchBtn = document.getElementById("fetch-btn")
 
@@ -41,22 +44,52 @@ var humidFive = document.getElementById("humidFive")
 var humidSix = document.getElementById("humidSix")
 /* -------------------------------- Fetch Api ------------------------------- */
 
+function search(){
+ city = document.getElementById("search-city").value
+ console.log(city)
+ fetch(`${weatherUrl}/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`)
+ .then(response => response.json())
+ .then((data)=>{
+    displayCity.innerHTML = data.name
+    displayTemp.innerHTML = data.main.temp
+    displayWind.innerHTML = data.wind.speed
+    displayHumidity.innerHTML = data.main.humidity
+     console.log(data)
+})
+
+// Create another fetch call for 5 day forecast
+fetch(`${weatherUrl}/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`)
+ .then(response => response.json())
+ .then((data)=>{
+    displayDayOneDate.innerHTML = data.daily[1].dt
+    iconTwo.innerHTML = data.daily[1].weather[0].icon
+    tempTwo.innerHTML = data.daily[1].temp.day
+    windTwo.innerHTML = data.daily[1].wind_speed
+    humidTwo.innerHTML = data.daily[1].humidity  
+   
+     console.log(data)
+})
+//
+
+}
+fetchBtn.addEventListener("click", search)
+
     fetch('https://api.openweathermap.org/data/2.5/onecall?lat=34.053345&lon=-118.242349&exclude=current,minutely,hourly,alerts&appid=0255c5995a7668330428d0c738d5fc29')
     .then(response => response.json())
     .then((data)=>{
         console.log(data)
         fetchBtn.onclick = function() {
-         displayCity.innerHTML = data.timezone
-         displayTemp.innerHTML = data.daily[0].temp.day
-         displayWind.innerHTML = data.daily[0].wind_speed
-         displayHumidity.innerHTML = data.daily[0].humidity
+         //displayCity.innerHTML = data.timezone
+        //  displayTemp.innerHTML = data.daily[0].temp.day
+        //  displayWind.innerHTML = data.daily[0].wind_speed
+        //  displayHumidity.innerHTML = data.daily[0].humidity
 
         
-         displayDayOneDate.innerHTML = data.daily[1].dt
-         iconTwo.innerHTML = data.daily[1].weather[0].icon
-         tempTwo.innerHTML = data.daily[1].temp.day
-         windTwo.innerHTML = data.daily[1].wind_speed
-         humidTwo.innerHTML = data.daily[1].humidity
+        //  displayDayOneDate.innerHTML = data.daily[1].dt
+        //  iconTwo.innerHTML = data.daily[1].weather[0].icon
+        //  tempTwo.innerHTML = data.daily[1].temp.day
+        //  windTwo.innerHTML = data.daily[1].wind_speed
+        //  humidTwo.innerHTML = data.daily[1].humidity
 
          displayDayTwoDate.innerHTML = data.daily[2].dt
          iconThree.innerHTML = data.daily[2].weather[0].icon
