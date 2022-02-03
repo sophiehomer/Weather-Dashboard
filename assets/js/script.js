@@ -61,12 +61,28 @@ function search(){
 fetch(`${weatherUrl}/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`)
  .then(response => response.json())
  .then((data)=>{
-    displayDayOneDate.innerHTML = data.daily[1].dt
-    iconTwo.innerHTML = data.daily[1].weather[0].icon
-    tempTwo.innerHTML = data.daily[1].temp.day
-    windTwo.innerHTML = data.daily[1].wind_speed
-    humidTwo.innerHTML = data.daily[1].humidity  
-   
+    tempTwo.innerHTML = data.list[1].main.temp
+    windTwo.innerHTML = data.list[1].wind.speed
+    humidTwo.innerHTML = data.list[1].main.humidity 
+    
+    tempThree.innerHTML = data.list[2].main.temp
+    windThree.innerHTML = data.list[2].wind.speed
+    humidThree.innerHTML = data.list[2].main.humidity
+
+
+    tempFour.innerHTML = data.list[3].main.temp
+    windFour.innerHTML = data.list[3].wind.speed
+    humidFour.innerHTML = data.list[3].main.humidity
+
+    tempFive.innerHTML = data.list[4].main.temp
+    windFive.innerHTML = data.list[4].wind.speed
+    humidFive.innerHTML = data.list[4].main.humidity
+
+    tempSix.innerHTML = data.list[5].main.temp
+    windSix.innerHTML = data.list[5].wind.speed
+    humidSix.innerHTML = data.list[5].main.humidity
+
+
      console.log(data)
 })
 //
@@ -74,94 +90,4 @@ fetch(`${weatherUrl}/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`
 }
 fetchBtn.addEventListener("click", search)
 
-    fetch('https://api.openweathermap.org/data/2.5/onecall?lat=34.053345&lon=-118.242349&exclude=current,minutely,hourly,alerts&appid=0255c5995a7668330428d0c738d5fc29')
-    .then(response => response.json())
-    .then((data)=>{
-        console.log(data)
-        fetchBtn.onclick = function() {
-         //displayCity.innerHTML = data.timezone
-        //  displayTemp.innerHTML = data.daily[0].temp.day
-        //  displayWind.innerHTML = data.daily[0].wind_speed
-        //  displayHumidity.innerHTML = data.daily[0].humidity
-
-        
-        //  displayDayOneDate.innerHTML = data.daily[1].dt
-        //  iconTwo.innerHTML = data.daily[1].weather[0].icon
-        //  tempTwo.innerHTML = data.daily[1].temp.day
-        //  windTwo.innerHTML = data.daily[1].wind_speed
-        //  humidTwo.innerHTML = data.daily[1].humidity
-
-         displayDayTwoDate.innerHTML = data.daily[2].dt
-         iconThree.innerHTML = data.daily[2].weather[0].icon
-         tempThree.innerHTML = data.daily[2].temp.day
-         windThree.innerHTML = data.daily[2].wind_speed
-         humidThree.innerHTML = data.daily[2].humidity
-
-         displayDayThreeDate.innerHTML = data.daily[3].dt
-         iconFour.innerHTML = data.daily[3].weather[0].icon   
-         tempFour.innerHTML = data.daily[3].temp.day
-         windFour.innerHTML = data.daily[3].wind_speed
-         humidFour.innerHTML = data.daily[3].humidity
-
-         displayDayFourDate.innerHTML = data.daily[4].dt
-         iconFive.innerHTML = data.daily[4].weather[0].icon
-         tempFive.innerHTML = data.daily[4].temp.day
-         windFive.innerHTML = data.daily[4].wind_speed
-         humidFive.innerHTML = data.daily[4].humidity
-
-         displayDayFiveDate.innerHTML = data.daily[5].dt
-         iconSix.innerHTML = data.daily[5].weather[0].icon
-         tempSix.innerHTML = data.daily[5].temp.day
-         windSix.innerHTML = data.daily[5].wind_speed
-         humidSix.innerHTML = data.daily[5].humidity
-
-
-        }
-    });
-
-// console.log(data)
-// //  .then(function(response) {
-// //     return response.json();
-// }).then(function(data) {
-//     console.log(data);})}
- 
-
-/* ------------------------------- Search City ------------------------------ */
-
- /* ---------------------------- Five Day Forecast --------------------------- */
-
-//  displayDayOneDate.innerHTML = dayOne; 
-//  $("$icon1").html("<img src='http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png' alt='weather icon'>");
-//  displayTemp.innerHTML = ("Temp: " + data.list[0].main.temp);
-//  displayWind.innerHTML = ("Wind: " + data.list[0].wind.speed);
-//  displayHumidity.innerHTML = ("Humidity: " + data.list[0].main.humidity);
-
-//  displayDayTwoDate.innerHTML = dayTwo;
-//  $("$icon2").html("<img src='http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png' alt='weather icon'>");
-//  temp2.innerHTML = ("Temp: " + data.list[2].main.temp);
-//  wind2.innerHTML = ("Wind: " + data.list[2].wind.speed);
-//  humid2.innerHTML = ("Humidity: " + data.list[2].main.humidity);
- 
-//  displayDayThreeDate.innerHTML = dayThree;
 //  $("$icon3").html("<img src='http://openweathermap.org/img/w/" + data.list[10].weather[0].icon + ".png' alt='weather icon'>");
-//  temp3.innerHTML = ("Temp: " + data.list[10].main.temp);
-//  wind3.innerHTML = ("Wind: " + data.list[10].wind.speed);
-//  humid3.innerHTML = ("Humidity: " + data.list[10].main.humidity);
-
-//  displayDayFourDate.innerHTML = dayFour;
-//  $("$icon4").html("<img src='http://openweathermap.org/img/w/" + data.list[18].weather[0].icon + ".png' alt='weather icon'>");
-//  temp4.innerHTML = ("Temp: " + data.list[18].main.temp);
-//  wind4.innerHTML = ("Wind: " + data.list[18].wind.speed);
-//  humid4.innerHTML = ("Humidity: " + data.list[18].main.humidity);
-
-//  displayDayFiveDate.innerHTML = dayFive;
-//  $("$icon5").html("<img src='http://openweathermap.org/img/w/" + data.list[18].weather[0].icon + ".png' alt='weather icon'>");
-//  temp5.innerHTML = ("Temp: " + data.list[26].main.temp);
-//  wind5.innerHTML = ("Wind: " + data.list[26].wind.speed);
-//  humid5.innerHTML = ("Humidity: " + data.list[26].main.humidity);
-
-//  displayDaySixDate.innerHTML = daySix;
-//  $("$icon6").html("<img src='http://openweathermap.org/img/w/" + data.list[34].weather[0].icon + ".png' alt='weather icon'>");
-//  temp6.innerHTML = ("Temp: " + data.list[34].main.temp);
-//  wind6.innerHTML = ("Wind: " + data.list[34].wind.speed);
-//  humid6.innerHTML = ("Humidity: " + data.list[34].main.humidity);
