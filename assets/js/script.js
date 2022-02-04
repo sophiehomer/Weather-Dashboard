@@ -64,7 +64,7 @@ $('#fetch-button').on('click', function() {
    })
    .then(function (data) {  
    console.log(data);
-  /* ---------------------------- CURRENT CITY TEMP --------------------------- */
+  /* ---------------------------- CURRENT CITY TEMP SET ITEM --------------------------- */
    displayCity.innerHTML = (data.city.name);
    displayHumidity.innerHTML = ("Humidity: " + data.list[0].main.humidity);
    displayTemp.innerHTML = ("Temp: " + data.list[0].main.temp + "°F");
@@ -81,7 +81,7 @@ $('#fetch-button').on('click', function() {
  
    console.log(data.city.name)  
 
-  /* ---------------------------------- DAY 2 --------------------------------- */
+  /* ---------------------------------- DAY 2 SET ITEM --------------------------------- */
    displayDayTwoDate.innerHTML = dayTwo;
    $("#icon2").html("<img src='http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
    temp2.innerHTML= ("Temp: " + data.list[2].main.temp + "°F");
@@ -94,7 +94,7 @@ $('#fetch-button').on('click', function() {
    localStorage.setItem("date2", dayTwo); 
    localStorage.setItem("icon2", "<img src='http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png>")
 
-  /* ---------------------------------- DAY 3 --------------------------------- */
+  /* ---------------------------------- DAY 3 SET ITEM --------------------------------- */
    displayDayThreeDate.innerHTML = dayThree;
    $("#icon3").html("<img src='http://openweathermap.org/img/w/" + data.list[10].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
    temp3.innerHTML= ("Temp: " + data.list[10].main.temp + "°F");
@@ -107,7 +107,7 @@ $('#fetch-button').on('click', function() {
    localStorage.setItem("date3", dayThree);
    localStorage.setItem("icon3", "<img src='http://openweathermap.org/img/w/" + data.list[10].weather[0].icon + ".png>")
 
-  /* ---------------------------------- DAY 4 --------------------------------- */
+  /* ---------------------------------- DAY 4 SET ITEM --------------------------------- */
   displayDayFourDate.innerHTML = dayFour;
    $("#icon4").html("<img src='http://openweathermap.org/img/w/" + data.list[18].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
    temp4.innerHTML= ("Temp: " + data.list[18].main.temp + "°F");
@@ -120,7 +120,7 @@ $('#fetch-button').on('click', function() {
    localStorage.setItem("date4", dayFour);
    localStorage.setItem("icon4", "<img src='http://openweathermap.org/img/w/" + data.list[18].weather[0].icon + ".png>")
 
-  /* ---------------------------------- DAY 5 --------------------------------- */
+  /* ---------------------------------- DAY 5 SET ITEM --------------------------------- */
    displayDayFiveDate.innerHTML = dayFive;
    $("#icon5").html("<img src='http://openweathermap.org/img/w/" + data.list[26].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
    temp5.innerHTML= ("Temp: " + data.list[26].main.temp + "°F");
@@ -133,7 +133,7 @@ $('#fetch-button').on('click', function() {
    localStorage.setItem("date5", dayFive); 
    localStorage.setItem("icon5", "<img src='http://openweathermap.org/img/w/" + data.list[26].weather[0].icon + ".png>") 
 
-  /* ---------------------------------- DAY 6 --------------------------------- */
+  /* ---------------------------------- DAY 6 SET ITEM --------------------------------- */
    displayDaySixDate.innerHTML = daySix;
    $("#icon6").html("<img src='http://openweathermap.org/img/w/" + data.list[34].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
    temp6.innerHTML= ("Temp: " + data.list[34].main.temp + "°F");
@@ -148,7 +148,7 @@ $('#fetch-button').on('click', function() {
  });}
  
  function getVal() {
-  /* ---------------------------------- DAY 1 --------------------------------- */
+  /* ---------------------------------- DAY 1 GET ITEM --------------------------------- */
    var cityDisplay = localStorage.getItem("city1");
    displayCity.innerHTML = cityDisplay;
  
@@ -167,7 +167,7 @@ $('#fetch-button').on('click', function() {
    var displayDay1 = localStorage.getItem("date1");
    displayDayOneDate.innerHTML = displayDay1;
  
-  /* ---------------------------------- DAY 2 --------------------------------- */
+  /* ---------------------------------- DAY 2 GET ITEM --------------------------------- */
    var displayHumid2 = localStorage.getItem("humid2");
    humid2.innerHTML = "Humidty: " + displayHumid2;
  
@@ -183,7 +183,7 @@ $('#fetch-button').on('click', function() {
    var displayDay2 = localStorage.getItem("date2");
    displayDayTwoDate.innerHTML = displayDay2;
  
-  /* ---------------------------------- DAY 3 --------------------------------- */
+  /* ---------------------------------- DAY 3 GET ITEM --------------------------------- */
    var displayHumid3 = localStorage.getItem("humid3");
    humid3.innerHTML = "Humidty: " + displayHumid3;
  
@@ -199,7 +199,7 @@ $('#fetch-button').on('click', function() {
    var displayDay3 = localStorage.getItem("date3");
    displayDayThreeDate.innerHTML = displayDay3;
  
-  /* ---------------------------------- DAY 4 --------------------------------- */
+  /* ---------------------------------- DAY 4 GET ITEM --------------------------------- */
    var displayHumid4 = localStorage.getItem("humid4");
    humid4.innerHTML = "Humidty: " + displayHumid4;
  
@@ -215,7 +215,7 @@ $('#fetch-button').on('click', function() {
    var displayDay4 = localStorage.getItem("date4");
    displayDayFourDate.innerHTML = displayDay4;
  
-  /* ---------------------------------- DAY 5 --------------------------------- */
+  /* ---------------------------------- DAY 5 GET ITEM --------------------------------- */
    var displayHumid5 = localStorage.getItem("humid5");
    humid5.innerHTML = "Humidty: " + displayHumid5;
  
@@ -231,7 +231,7 @@ $('#fetch-button').on('click', function() {
    var displayDay5 = localStorage.getItem("date5");
    displayDayFiveDate.innerHTML = displayDay5;
  
-  /* ---------------------------------- DAY 6 --------------------------------- */
+  /* ---------------------------------- DAY 6 GET ITEM --------------------------------- */
    var displayHumid6 = localStorage.getItem("humid6");
    humid6.innerHTML = "Humidty: " + displayHumid6;
  
