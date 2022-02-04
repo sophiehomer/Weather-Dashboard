@@ -18,70 +18,69 @@
     <div class="container-fluid">
         <div class="row col-3 pl-5" id="container">
             <div class="search-field">
-                <input id="search-city" class="form-control search-input" type="text" placeholder="Search Cities" aria-label="Search"/>
-                <button type="button" class="search-btn" id="fetch-btn"> Search </button>
+                <input id="enter-city" class="form-control search-input mt-2" type="text" placeholder="Search Cities" aria-label="Search"/>
+                <button type="button" class="search-btn" id="fetch-button"> Search </button>
             </div>
-                <button type="button" class="city-btn btn-md btn-block d-block mt-3"  id="austin"> Austin </button>
-                <button type="button" class="city-btn btn-md btn-block d-block mt-2" id="Chicago"> Chicago </button>
-                <button type="button" class="city-btn btn-md btn-block d-block mt-2" id="new-york"> New York </button>
-                <button type="button" class="city-btn btn-md btn-block d-block mt-2" id="orlando"> Orlando </button>
-                <button type="button" class="city-btn btn-md btn-block d-block mt-2" id="seattle"> Seattle </button>
-                <button type="button" class="city-btn btn-md btn-block d-block mt-2" id="denver"> Denver </button>
-                <button type="button" class="city-btn btn-md btn-block d-block mt-2" id="atlanta"> Atlanta </button>
-                <button type="button" class="city-btn btn-md btn-block d-block mt-2" id="boston">Boston</button>
-
+                <button type="button" class="btn btn-secondary btn-md btn-block d-block mt-3 fav"  id="austin"> Austin </button>
+                <button type="button" class="btn btn-secondary btn-md btn-block d-block mt-2 fav" id="Chicago"> Chicago </button>
+                <button type="button" class="btn btn-secondary btn-md btn-block d-block mt-2 fav" id="new-york"> New York </button>
+                <button type="button" class="btn btn-secondary btn-md btn-block d-block mt-2 fav" id="orlando"> Orlando </button>
+                <button type="button" class="btn btn-secondary btn-md btn-block d-block mt-2 fav" id="san-francisco"> San Francisco</button>
+                <button type="button" class="btn btn-secondary btn-md btn-block d-block mt-2 fav" id="seattle"> Seattle </button>
+                <button type="button" class="btn btn-secondary btn-md btn-block d-block mt-2 fav" id="denver"> Denver</button>
+                <button type="button" class="btn btn-secondary btn-md btn-block d-block mt-2 fav" id="atlanta">Atlanta</button>
         </div>
 
         <div class= "container-days col-9">
-        <div class="cityTemp border border-medium p-2 mt-2 m-4">
-            <h1 id="dayOne"></h1>
-            <div id="iconOne">
+        <div class="cityTemp border border-medium p-2 mt-2">
+            <h1 id="dayOneDate"></h1>
+            <div id="icon1"></div>
                 <h1 id="city">City</h1>
                 <p id="temp">Temperature</p>
                 <p id="wind">Wind</p>
                 <p id="humid">Humidity</p>
-            </div>
         </div>    
         <h2 class="mt-5">5 Day Forecast</h2>
     <div class="forecast p-2 mt-2 row m-1">
-        <div id="dayTwo" class="card m-3 ml-3" >
-          <h3 class="m-3 text" id="dayOneDate"></h3>
-          <!-- <div id="iconTwo"></div> -->
-          <p class="text-darkt" id="tempTwo">Temp</p>
-          <p class="text-dark" id="windTwo">Wind</p>
-          <p class="text-dark" id="humidTwo">Humidity</p>
+
+        <div id="day2" class="card m-4" >
+          <h3 class="m-3 text" id="dayTwoDate"></h3>
+          <div id="icon2"></div>
+          <p class="ml-2 text-dark" id="temp2">Temp</p>
+          <p class="ml-2 text-dark" id="wind2">Wind</p>
+          <p class="ml-2 text-dark" id="humid2">Humidity</p>
         </div>
 
-        <div id="dayThree" class="card m-3">
-         <h3 class="m-3 text" id="dayTwoDate"></h3>
-          <!-- <div id="iconThree"></div> -->
-            <p class="ml-2 text-dark" id="tempThree">Temp</p>
-            <p class="ml-2 text-dark" id="windThree">Wind</p>
-            <p class="ml-2 text-dark" id="humidThree">Humidity</p>
-        </div>
-
-        <div id="dayFour" class="card m-3">
+        <div id="day3" class="card m-4">
          <h3 class="m-3 text" id="dayThreeDate"></h3>
-         <!-- <div id="iconFour"></div> -->
-         <p class="ml-2 text-dark" id="tempFour">Temp</p>
-         <p class="ml-2 text-dark" id="windFour">Wind</p>
-         <p class="ml-2 text-dark" id="humidFour">Humidity</p>
+          <div id="icon3"></div>
+            <p class="ml-2 text-dark" id="temp3">Temp</p>
+            <p class="ml-2 text-dark" id="wind3">Wind</p>
+            <p class="ml-2 text-dark" id="humid3">Humidity</p>
+        </div>
+
+        <div id="day4" class="card m-4">
+         <h3 class="m-3 text" id="dayFourDate"></h3>
+         <div id="icon4"></div>
+         <p class="ml-2 text-dark" id="temp4">Temp</p>
+         <p class="ml-2 text-dark" id="wind4">Wind</p>
+         <p class="ml-2 text-dark" id="humid4">Humidity</p>
          </div>
 
-        <div id="dayFive" class="card m-3">
-         <h3 class="m-3 text" id="dayFourDate"></h3>
-         <!-- <div id="iconFive"></div> -->
-         <p class="ml-2 text-dark" id="tempFive">Temp</p>
-         <p class="ml-2 text-dark" id="windFive">Wind</p>
-         <p class="ml-2 text-dark" id="humidFive">Humidity</p>
+        <div id="day5" class="card m-4">
+         <h3 class="m-3 text" id="dayFiveDate"></h3>
+         <div id="icon5"></div>
+         <p class="ml-2 text-dark" id="temp5">Temp</p>
+         <p class="ml-2 text-dark" id="wind5">Wind</p>
+         <p class="ml-2 text-dark" id="humid5">Humidity</p>
         </div>
 
-        <div id="daySix" class="card m-3">
-         <h3 class="m-3 text" id="dayFiveDate"></h3>
-         <div id="iconSix"></div>
-         <p class="ml-2 text-dark" id="tempSix">Temp</p>
-         <p class="ml-2 text-dark" id="windSix">Wind</p>
-         <p class="ml-2 text-dark" id="humidSix">Humidity</p>
+        <div id="day6" class="card m-4">
+         <h3 class="m-3 text" id="daySixDate"></h3>
+         <div id="icon6"></div>
+         <p class="ml-2 text-dark" id="temp6">Temp</p>
+         <p class="ml-2 text-dark" id="wind6">Wind</p>
+         <p class="ml-2 text-dark" id="humid6">Humidity</p>
         </div>
     </div>
         </div>
