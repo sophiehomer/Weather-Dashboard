@@ -31,7 +31,7 @@ margin-left: 10px;
 margin-bottom: 30px;
 }
 
-.btn-secondary {
+.btn {
 color: white;
 background-color: rgb(97, 154, 230);
 border: none;
@@ -41,7 +41,7 @@ margin-bottom: 5px;
 width: 100%;
 }
 
-.btn-secondary:hover {
+.btn:hover {
 background-image: linear-gradient(lightblue, rgb(97, 154, 230));
 }
  
