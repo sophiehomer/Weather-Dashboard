@@ -11,16 +11,19 @@
     <title>Weather Dashboard</title>
     </head>
     <body>
-        <!-- ------------------------------- Nav Bar ------------------------------- -->
+             <!-- ------------------------------- NAV ------------------------------- -->
         <nav>
             <span class="weather-dashboard" href="#">Weather Dashboard</span>
         </nav>
+
+            <!-- ----------------------------- CITY SEARCH ----------------------------- -->
     <div class="container-fluid">
         <div class="row col-3 pl-5" id="container">
             <div class="search-field">
                 <input id="enter-city" class="form-control search-input mt-2" type="text" placeholder="Search Cities" aria-label="Search"/>
                 <button type="button" class="search-btn" id="fetch-button"> Search </button>
             </div>
+            <!-- ---------------------------- CITY BUTTONS ----------------------------- -->
                 <button type="button" class="btn btn-block mt-2 fav"  id="austin"> Austin </button>
                 <button type="button" class="btn btn-block mt-2 fav" id="Chicago"> Chicago </button>
                 <button type="button" class="btn btn-block mt-2 fav" id="new-york"> New York </button>
@@ -30,57 +33,58 @@
                 <button type="button" class="btn btn-block mt-2 fav" id="denver"> Denver</button>
                 <button type="button" class="btn btn-block mt-2 fav" id="atlanta">Atlanta</button>
         </div>
-
+            <!-- -------------------------- CURRENT CITY/TEMP -------------------------- -->
         <div class= "container-days col-9">
-        <div class="cityTemp border border-medium p-2 mt-2">
-            <h1 id="dayOneDate"></h1>
-            <div id="iconOne"></div>
+        <div class="cityTemp border border-medium p-2 mt-2 pl-4">
+            <h1 id="firstDate"></h1>
+            <div id="iconOne" class="icon-align"></div>
                 <h1 id="city">City</h1>
-                <p id="temp">Temperature</p>
-                <p id="wind">Wind</p>
-                <p id="humidity">Humidity</p>
+                <p id="temp">Temp:</p>
+                <p id="wind">Wind:</p>
+                <p id="humidity">Humidity:</p>
         </div>    
+        <!-- -------------------------- FIVE DAY FORECAST -------------------------- -->
         <h2 class="mt-5">5 Day Forecast</h2>
-    <div class="forecast p-2 mt-2 row m-1">
+        <div class="forecast p-2 mt-2 row m-1">
 
         <div id="dayTwo" class="card m-4" >
-          <h3 class="m-3 text" id="dayTwoDate"></h3>
-          <div id="iconTwo"></div>
-          <p class="ml-2 text-dark" id="tempTwo">Temp</p>
-          <p class="ml-2 text-dark" id="windTwo">Wind</p>
-          <p class="ml-2 text-dark" id="humidityTwo">Humidity</p>
+          <h3 class="m-3 text" id="secondDate"></h3>
+          <div id="iconTwo" class="icon-align"></div>
+          <p class="ml-2" id="tempTwo">Temp:</p>
+          <p class="ml-2" id="windTwo">Wind:</p>
+          <p class="ml-2" id="humidityTwo">Humidity:</p>
         </div>
 
         <div id="dayThree" class="card m-4">
-         <h3 class="m-3 text" id="dayThreeDate"></h3>
-          <div id="iconThree"></div>
-            <p class="ml-2 text-dark" id="tempThree">Temp</p>
-            <p class="ml-2 text-dark" id="windThree">Wind</p>
-            <p class="ml-2 text-dark" id="humidityThree">Humidity</p>
+         <h3 class="m-3 text" id="thirdDate"></h3>
+          <div id="iconThree" class="icon-align"></div>
+            <p class="ml-2" id="tempThree">Temp:</p>
+            <p class="ml-2" id="windThree">Wind:</p>
+            <p class="ml-2" id="humidityThree">Humidity:</p>
         </div>
 
         <div id="dayFour" class="card m-4">
-         <h3 class="m-3 text" id="dayFourDate"></h3>
-         <div id="iconFour"></div>
-         <p class="ml-2 text-dark" id="tempFour">Temp</p>
-         <p class="ml-2 text-dark" id="windFour">Wind</p>
-         <p class="ml-2 text-dark" id="humidityFour">Humidity</p>
+         <h3 class="m-3 text" id="fourthDate"></h3>
+         <div id="iconFour" class="icon-align"></div>
+         <p class="ml-2" id="tempFour">Temp:</p>
+         <p class="ml-2" id="windFour">Wind:</p>
+         <p class="ml-2" id="humidityFour">Humidity:</p>
          </div>
 
         <div id="dayFive" class="card m-4">
-         <h3 class="m-3 text" id="dayFiveDate"></h3>
-         <div id="iconFive"></div>
-         <p class="ml-2 text-dark" id="tempFive">Temp</p>
-         <p class="ml-2 text-dark" id="windFive">Wind</p>
-         <p class="ml-2 text-dark" id="humidityFive">Humidity</p>
+         <h3 class="m-3 text" id="fifthDate"></h3>
+         <div id="iconFive" class="icon-align"></div>
+         <p class="ml-2" id="tempFive">Temp:</p>
+         <p class="ml-2" id="windFive">Wind:</p>
+         <p class="ml-2" id="humidityFive">Humidity:</p>
         </div>
 
         <div id="daySix" class="card m-4">
-         <h3 class="m-3 text" id="daySixDate"></h3>
-         <div id="iconSix"></div>
-         <p class="ml-2 text-dark" id="tempSix">Temp</p>
-         <p class="ml-2 text-dark" id="windSix">Wind</p>
-         <p class="ml-2 text-dark" id="humiditySix">Humidity</p>
+         <h3 class="m-3 text" id="sixthDate"></h3>
+         <div id="iconSix" class="icon-align"></div>
+         <p class="ml-2" id="tempSix">Temp:</p>
+         <p class="ml-2" id="windSix">Wind:</p>
+         <p class="ml-2" id="humiditySix">Humidity:</p>
         </div>
     </div>
         </div>
