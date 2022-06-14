@@ -8,6 +8,7 @@
 * CSS
 * JAVASCRIPT
 * JQUERY
+* Open Weather API
 
 ## Website
 https://sophiehomer.github.io/Weather-Dashboard/
