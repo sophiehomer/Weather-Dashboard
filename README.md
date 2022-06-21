@@ -1,14 +1,14 @@
 # Weather-Dashboard
 
 ## Purpose
-A website to where future employers will be able to see my work and find my contact information.
+5 day weather application
 
 ## Built With
 * HTML
 * CSS
 * JAVASCRIPT
 * JQUERY
-* BOOTSTRAP
+* Open Weather API
 
 ## Website
 https://sophiehomer.github.io/Weather-Dashboard/
