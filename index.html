@@ -17,24 +17,24 @@
         </nav>
 
             <!-- ----------------------------- CITY SEARCH ----------------------------- -->
-    <div class="container-fluid">
-        <div class="row col-3 pl-5" id="container">
+    <div class="page-container">
+        <div class="searchContainer" id="container">
             <div class="search-field">
                 <input id="enter-city" class="form-control search-input mt-2" type="text" placeholder="Search Cities" aria-label="Search"/>
                 <button type="button" class="search-btn" id="fetch-button"> Search </button>
             </div>
             <!-- ---------------------------- CITY BUTTONS ----------------------------- -->
-                <button type="button" class="btn btn-block mt-2 fav"  id="austin"> Austin </button>
-                <button type="button" class="btn btn-block mt-2 fav" id="Chicago"> Chicago </button>
-                <button type="button" class="btn btn-block mt-2 fav" id="new-york"> New York </button>
-                <button type="button" class="btn btn-block mt-2 fav" id="orlando"> Orlando </button>
-                <button type="button" class="btn btn-block mt-2 fav" id="san-francisco"> San Francisco</button>
-                <button type="button" class="btn btn-block mt-2 fav" id="seattle"> Seattle </button>
-                <button type="button" class="btn btn-block mt-2 fav" id="denver"> Denver</button>
-                <button type="button" class="btn btn-block mt-2 fav" id="atlanta">Atlanta</button>
+                <button type="button" class="button mt-4 mb-2 fav"  id="austin"> Austin </button>
+                <button type="button" class="button mb-2 fav" id="Chicago"> Chicago </button>
+                <button type="button" class="button mb-2 fav" id="new-york"> New York </button>
+                <button type="button" class="button mb-2 fav" id="orlando"> Orlando </button>
+                <button type="button" class="button mb-2 fav" id="san-francisco"> San Francisco</button>
+                <button type="button" class="button mb-2 fav" id="seattle"> Seattle </button>
+                <button type="button" class="button mb-2 fav" id="denver"> Denver</button>
+                <button type="button" class="button mb-2 fav" id="atlanta">Atlanta</button>
         </div>
             <!-- -------------------------- CURRENT CITY/TEMP -------------------------- -->
-        <div class= "container-days col-9">
+        <div class= "container-days">
         <div class="cityTemp border border-medium p-2 mt-2 pl-2">
             <h1 id="firstDate"></h1>
             <div id="iconOne" class="icon-align"></div>
@@ -44,7 +44,6 @@
                 <p id="humidity">Humidity:</p>
         </div>    
             <!-- -------------------------- FIVE DAY FORECAST -------------------------- -->
-        <h2 class="mt-5">5 Day Forecast</h2>
         <div class="forecast p-2 mt-2 row m-1">
 
         <div id="dayTwo" class="card m-2" >
@@ -88,7 +87,7 @@
         </div>
     </div>
         </div>
-        </div>
+    </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

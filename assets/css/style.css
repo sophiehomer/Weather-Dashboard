@@ -10,6 +10,27 @@ background-image: linear-gradient(to right, lightblue, rgb(97, 154, 230));
 justify-content: center;
 }
 
+.page-container {
+  padding:5%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10%;
+}
+
 .search-btn {  
 margin-top: 10px;
 background-color: rgb(97, 154, 230);
@@ -18,6 +39,17 @@ border: none;
 border-radius: 5px;
 width: 100%;
 padding-bottom: 5px;
+padding: .6em 1.2em;
+/* padding: .6em 1.5em; */
+}
+
+button {
+  background-color: rgb(97, 154, 230);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;  
+  padding: .6em 1.2em;
 }
 
 .search-btn:hover {
@@ -25,11 +57,6 @@ background-image: linear-gradient(lightblue, rgb(97, 154, 230));
 
 }
 
-.search-field {
-margin-top: 15px;
-margin-left: 10px;
-margin-bottom: 30px;
-}
 
 .btn {
 color: white;
@@ -46,9 +73,16 @@ background-image: linear-gradient(lightblue, rgb(97, 154, 230));
 color: white
 }
  
-.container-fluid {
-display: flex;
-margin-top: 20px;
+
+.container-days {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  /* padding-top: 5%;
+  padding-bottom: 5%; */
+  background-color: orange;
+  width: 80%;
+
 }
 
 h1 {
@@ -71,7 +105,7 @@ h3 {
  border:rgb(97, 154, 230);
  color: white;
  border-radius: 15px;
-
+width: 18%;
 }
 
 .cityTemp {
@@ -79,8 +113,6 @@ h3 {
   border:rgb(97, 154, 230);
   color: white;
   border-radius: 15px;
-  margin-right: 400px;
-  margin-left: 150px;
 }
 
 .cityTemp p {
