@@ -13,19 +13,18 @@
     <body>
              <!-- ------------------------------- HEADER/NAV ------------------------------- -->
         <header>
-            <nav>
+            <!-- <nav>
                 <h1 class="weather-dashboard" href="#">Weather Dashboard</h1>
-            </nav>    
+            </nav>     -->
         </header>
-      
             <!-- ----------------------------- CITY SEARCH ----------------------------- -->
-    <div class="page-container">
-        <div class="searchContainer" id="container">
-            <div class="search-field">
-                <input id="enter-city" class="form-control search-input mt-2" type="text" placeholder="Search Cities" aria-label="Search"/>
-                <button type="button" class="search-btn" id="fetch-button"> Search </button>
-            </div>
-            <!-- ---------------------------- CITY BUTTONS ----------------------------- -->
+         <main class="page-container">
+            <aside class="searchContainer" id="container">
+                <div class="search-field">
+                    <input id="enter-city" class="form-control search-input mt-2" type="text" placeholder="Search Cities" aria-label="Search"/>
+                    <button type="button" class="search-btn" id="fetch-button"> Search </button>
+                </div>
+                <!-- ---------------------------- CITY BUTTONS ----------------------------- -->
                 <button type="button" class="button mt-4 mb-2 fav"  id="austin"> Austin </button>
                 <button type="button" class="button mb-2 fav" id="Chicago"> Chicago </button>
                 <button type="button" class="button mb-2 fav" id="new-york"> New York </button>
@@ -34,65 +33,193 @@
                 <button type="button" class="button mb-2 fav" id="seattle"> Seattle </button>
                 <button type="button" class="button mb-2 fav" id="denver"> Denver</button>
                 <button type="button" class="button mb-2 fav" id="atlanta">Atlanta</button>
-        </div>
+            </aside>
             <!-- -------------------------- CURRENT CITY/TEMP -------------------------- -->
-        <div class= "container-days">
-        <div class="cityTemp border border-medium p-2 mt-2 pl-2">
-            <p id="firstDate"></p>
-            <div id="iconOne" class="icon-align"></div>
-                <p id="city">City</p>
-                <p id="temp">Temp:</p>
-                <p id="wind">Wind:</p>
-                <p id="humidity">Humidity:</p>
-        </div>    
+    
+        
+            <section class= "container-days">
+                <div class="cityTemp border border-medium p-2 mt-2 pl-2">
+                    <div class="cityDate">
+                        <p id="firstDate"></p>
+                       <p id="city"></p>
+                    </div>
+                
+                <section class="tempWindHumidSection">
+                    <div class="tempDiv">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-thermometer-high" viewBox="0 0 16 16">
+                            <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585a1.5 1.5 0 0 1 1 1.415z"/>
+                            <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"/>
+                        </svg>
+                        <p id="temp"></p>
+                        </div>
+    
+                    <div class="windDiv">
+                        <svg id="windyLogo"xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-wind" viewBox="0 0 16 16">
+                            <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                        <p id="wind"></p>
+                    </div>
+    
+                    <div class="humidDiv">
+                        <svg id="humidlogo" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-droplet" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0 0 10 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+                            <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"/>
+                        </svg> 
+                        <p id="humidity"></p>  
+                    </div>
+                   
+                </section>
+
+                <p id="iconOne" class="icon"></p>
+            </div>  
+             
+                 
             <!-- -------------------------- FIVE DAY FORECAST -------------------------- -->
         <div class="forecast">
 
         <div id="dayTwo" class="card" >
           <p class="m-3 text" id="secondDate"></p>
           <div id="iconTwo" class="icon-align"></div>
-          <p class="ml-2" id="tempTwo">Temp:</p>
-          <p class="ml-2" id="windTwo"></p>
-          <p class="ml-2" id="humidityTwo">Humidity:</p>
+          <div class="tempTwoContainer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-thermometer-high" viewBox="0 0 16 16">
+              <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585a1.5 1.5 0 0 1 1 1.415z"/>
+              <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"/>
+          </svg>
+          <p class="ml-2" id="tempTwo"></p>
+          </div>
+         <div class="windTwoContainer">
+            <svg id="windyLogo"xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-wind" viewBox="0 0 16 16">
+                <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <p class="ml-2" id="windTwo"></p>
+         </div>
+         <div class="humidTwoContainer">
+            <svg id="humidlogo" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-droplet" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0 0 10 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+                <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"/>
+            </svg>
+            <p class="ml-2" id="humidityTwo"></p>
+         </div>
         </div>
 
         <div id="dayThree" class="card">
          <p class="m-3 text" id="thirdDate"></p>
           <div id="iconThree" class="icon-align"></div>
-            <p class="ml-2" id="tempThree">Temp:</p>
-            <p class="ml-2" id="windThree">Wind:</p>
-            <p class="ml-2" id="humidityThree">Humidity:</p>
+          <div class="tempThreeContainer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-thermometer-high" viewBox="0 0 16 16">
+                <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585a1.5 1.5 0 0 1 1 1.415z"/>
+                <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"/>
+            </svg>
+            <p class="ml-2" id="tempThree"></p>
+          </div>
+
+          <div class="windThreeContainer">
+            <svg id="windyLogo"xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-wind" viewBox="0 0 16 16">
+                <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <p class="ml-2" id="windThree"></p>
+          </div>
+
+          <div class="humidThreeContainer">
+            <svg id="humidlogo" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-droplet" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0 0 10 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+                <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"/>
+            </svg>
+            <p class="ml-2" id="humidityThree"></p>
+          </div>
         </div>
 
         <div id="dayFour" class="card">
          <p class="m-3 text" id="fourthDate"></p>
          <div id="iconFour" class="icon-align"></div>
-         <p class="ml-2" id="tempFour">Temp:</p>
-         <p class="ml-2" id="windFour">Wind:</p>
-         <p class="ml-2" id="humidityFour">Humidity:</p>
+
+         <div class="tempFourContainer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-thermometer-high" viewBox="0 0 16 16">
+                <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585a1.5 1.5 0 0 1 1 1.415z"/>
+                <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"/>
+            </svg>
+            <p class="ml-2" id="tempFour"></p>
+         </div>
+
+         <div class="windFourContainer">
+            <svg id="windyLogo"xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-wind" viewBox="0 0 16 16">
+                <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <p class="ml-2" id="windFour"></p>
+         </div>
+
+         <div class="humidFourContainer">
+            <svg id="humidlogo" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-droplet" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0 0 10 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+                <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"/>
+            </svg>
+            <p class="ml-2" id="humidityFour"></p>
+         </div>
          </div>
 
         <div id="dayFive" class="card">
          <p class="m-3 text" id="fifthDate"></p>
          <div id="iconFive" class="icon-align"></div>
-         <p class="ml-2" id="tempFive">Temp:</p>
-         <p class="ml-2" id="windFive">Wind:</p>
-         <p class="ml-2" id="humidityFive">Humidity:</p>
+
+         <div class="tempFiveContainer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-thermometer-high" viewBox="0 0 16 16">
+                <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585a1.5 1.5 0 0 1 1 1.415z"/>
+                <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"/>
+            </svg>
+            <p class="ml-2" id="tempFive"></p>
+         </div>
+
+         <div class="windFiveContainer">
+            <svg id="windyLogo"xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-wind" viewBox="0 0 16 16">
+                <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <p class="ml-2" id="windFive"></p>
+        </div>
+
+        <div class="humidFiveContainer">
+            <svg id="humidlogo" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-droplet" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0 0 10 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+                <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"/>
+            </svg>
+            <p class="ml-2" id="humidityFive"></p>
+        </div>
+  
         </div>
 
         <div id="daySix" class="card">
          <p class="m-3 text" id="sixthDate"></p>
          <div id="iconSix" class="icon-align"></div>
-         <p class="ml-2" id="tempSix">Temp:</p>
-         <p class="ml-2" id="windSix">Wind:</p>
-         <p class="ml-2" id="humiditySix">Humidity:</p>
+
+         <div class="tempSixContainer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-thermometer-high" viewBox="0 0 16 16">
+                <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585a1.5 1.5 0 0 1 1 1.415z"/>
+                <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"/>
+            </svg>
+            <p class="ml-2" id="tempSix"></p>
+         </div>
+
+         <div class="windSixContainer">
+            <svg id="windyLogo"xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-wind" viewBox="0 0 16 16">
+                <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <p class="ml-2" id="windSix"></p>
+         </div>
+    
+         <div class="humidSixContainer">
+            <svg id="humidlogo" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-droplet" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0 0 10 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+                <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"/>
+            </svg>
+            <p class="ml-2" id="humiditySix"></p>
         </div>
-    </div>
+
         </div>
-    </div>
+        </div>
+    </section>
+    </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEp1eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEp1eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./assets/js/script.js"></script>
