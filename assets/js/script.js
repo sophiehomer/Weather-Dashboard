@@ -80,9 +80,9 @@ $('#fetch-button').on('click', function() {
   /* ---------------------------------- DAY 2 SET ITEM --------------------------------- */
 
    displaySecondDate.innerHTML = dayTwo;
-   tempTwo.innerHTML= ("Temp: " + data.list[2].main.temp + "°F");
-   windTwo.innerHTML= ("Wind: " + data.list[2].wind.speed + "mph");
-   humidityTwo.innerHTML= ("Humidity: " + data.list[2].main.humidity + "%");
+   tempTwo.innerHTML= (data.list[2].main.temp + "°F");
+   windTwo.innerHTML= (data.list[2].wind.speed + "mph");
+   humidityTwo.innerHTML= (data.list[2].main.humidity + "%");
    $("#iconTwo").html("<img src='https://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
 
    localStorage.setItem("dateTwo", dayTwo);
@@ -94,9 +94,9 @@ $('#fetch-button').on('click', function() {
   /* ---------------------------------- DAY 3 SET ITEM --------------------------------- */
 
    displayThirdDate.innerHTML = dayThree;
-   tempThree.innerHTML= ("Temp: " + data.list[10].main.temp + "°F");
-   windThree.innerHTML= ("Wind: " + data.list[10].wind.speed + "mph");
-   humidityThree.innerHTML= ("Humidity: " + data.list[10].main.humidity + "%");
+   tempThree.innerHTML= (data.list[10].main.temp + "°F");
+   windThree.innerHTML= (data.list[10].wind.speed + "mph");
+   humidityThree.innerHTML= (data.list[10].main.humidity + "%");
    $("#iconThree").html("<img src='https://openweathermap.org/img/w/" + data.list[10].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
    
    localStorage.setItem("dateThree", dayThree);
@@ -108,9 +108,9 @@ $('#fetch-button').on('click', function() {
   /* ---------------------------------- DAY 4 SET ITEM --------------------------------- */
 
    displayFourthDate.innerHTML = dayFour;
-   tempFour.innerHTML= ("Temp: " + data.list[18].main.temp + "°F");
-   windFour.innerHTML= ("Wind: " + data.list[18].wind.speed + "mph");
-   humidityFour.innerHTML= ("Humidity: " + data.list[18].main.humidity + "%");
+   tempFour.innerHTML= (data.list[18].main.temp + "°F");
+   windFour.innerHTML= (data.list[18].wind.speed + "mph");
+   humidityFour.innerHTML= (data.list[18].main.humidity + "%");
    $("#iconFour").html("<img src='https://openweathermap.org/img/w/" + data.list[18].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
 
    localStorage.setItem("dateFour", dayFour);
@@ -122,9 +122,9 @@ $('#fetch-button').on('click', function() {
   /* ---------------------------------- DAY 5 SET ITEM --------------------------------- */
 
    displayFifthDate.innerHTML = dayFive;
-   tempFive.innerHTML= ("Temp: " + data.list[26].main.temp + "°F");
-   windFive.innerHTML= ("Wind: " + data.list[26].wind.speed + "mph");
-   humidityFive.innerHTML= ("Humidity: " + data.list[26].main.humidity + "%");
+   tempFive.innerHTML= (data.list[26].main.temp + "°F");
+   windFive.innerHTML= (data.list[26].wind.speed + "mph");
+   humidityFive.innerHTML= (data.list[26].main.humidity + "%");
    $("#iconFive").html("<img src='https://openweathermap.org/img/w/" + data.list[26].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
 
    localStorage.setItem("datefive", dayFive); 
@@ -137,9 +137,9 @@ $('#fetch-button').on('click', function() {
 
    displaySixthDate.innerHTML = daySix;
    $("#iconSix").html("<img src='https://openweathermap.org/img/w/" + data.list[34].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
-   tempSix.innerHTML= ("Temp: " + data.list[34].main.temp + "°F");
-   windSix.innerHTML= ("Wind: " + data.list[34].wind.speed + "mph");
-   humiditySix.innerHTML= ("Humidity: " + data.list[34].main.humidity + "%");
+   tempSix.innerHTML= (data.list[34].main.temp + "°F");
+   windSix.innerHTML= (data.list[34].wind.speed + "mph");
+   humiditySix.innerHTML= (data.list[34].main.humidity + "%");
 
    localStorage.setItem("dateSix", daySix); 
    localStorage.setItem("tempSix", data.list[34].main.temp); 
@@ -193,13 +193,13 @@ $('#fetch-button').on('click', function() {
    displayThirdDate.innerHTML = displayDayThree;
 
    var displayTempThree = localStorage.getItem("tempThree");
-   tempThree.innerHTML = "Temp: " + displayTempThree;
+   tempThree.innerHTML = displayTempThree;
  
    var displayWindThree = localStorage.getItem("windThree");
-   windThree.innerHTML = "Wind: " + displayWindThree;
+   windThree.innerHTML =  displayWindThree;
  
    var displayHumidityThree = localStorage.getItem("humidityThree");
-   humidityThree.innerHTML = "Humidty: " + displayHumidityThree;
+   humidityThree.innerHTML = displayHumidityThree;
  
    var displayIconThree = localStorage.getItem("iconThree");
    $("#iconThree").html(displayIconThree);
@@ -210,13 +210,13 @@ $('#fetch-button').on('click', function() {
    displayFourthDate.innerHTML = displayDayFour;
     
    var displayTempFour = localStorage.getItem("tempFour");
-   tempFour.innerHTML = "Temp: " + displayTempFour;
+   tempFour.innerHTML = displayTempFour;
  
    var displayWindFour = localStorage.getItem("windFour");
-   windFour.innerHTML = "Wind: " + displayWindFour;
+   windFour.innerHTML = displayWindFour;
 
    var displayHumidityFour = localStorage.getItem("humidityFour");
-   humidityFour.innerHTML = "Humidty: " + displayHumidityFour;
+   humidityFour.innerHTML = displayHumidityFour;
  
    var displayIconFour = localStorage.getItem("iconFour");
    $("#iconFour").html(displayIconFour);
@@ -227,13 +227,13 @@ $('#fetch-button').on('click', function() {
    displayfifthDate.innerHTML = displayDayFive;
 
    var displayTempFive = localStorage.getItem("tempFive");
-   tempFive.innerHTML = "Temp: " + displayTempFive;
+   tempFive.innerHTML = displayTempFive;
  
    var displayWindFive = localStorage.getItem("windFive");
-   windFive.innerHTML = "Wind: " + displayWindFive;
+   windFive.innerHTML = displayWindFive;
 
    var displayHumidityFive = localStorage.getItem("humidityFive");
-   humidityFive.innerHTML = "Humidty: " + displayHumidityFive;
+   humidityFive.innerHTML = displayHumidityFive;
  
    var displayIconFive = localStorage.getItem("iconFive");
    $("#iconFive").html(displayIconFive);
@@ -244,13 +244,13 @@ $('#fetch-button').on('click', function() {
    displayDaySixthDate.innerHTML = displayDaySix;
 
    var displayTempSix = localStorage.getItem("tempSix");
-   tempSix.innerHTML = "Temp: " + displayTempSix;
+   tempSix.innerHTML = displayTempSix;
  
    var displayWindSix = localStorage.getItem("windSix");
-   windSix.innerHTML = "Wind: " + displayWindSix;
+   windSix.innerHTML = displayWindSix;
 
    var displayHumiditySix = localStorage.getItem("humiditySix");
-   humiditySix.innerHTML = "Humidty: " + displayHumiditySix;
+   humiditySix.innerHTML = displayHumiditySix;
  
    var displayIconSix = localStorage.getItem("iconSix");
    $("#iconSix").html(displayIconSix);
