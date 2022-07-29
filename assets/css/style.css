@@ -4,11 +4,10 @@
 
 body {
   min-height: 100vh;
-  /* background-image: linear-gradient(to bottom right, #8aaffa, #806ff9); */
   background-image: url(../assets/Cover.png);
   background-repeat: no-repeat;
-  background-position: center; /* Center the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center; 
+  background-size: cover; 
   color: white;
   letter-spacing: .03em
 }
@@ -24,14 +23,10 @@ nav {
   width: 100%;
 }
 
-
-
 .page-container {
-  /* padding-left:10%; */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  /* width: 80%; */
   padding: 4%;
 }
 
@@ -46,7 +41,6 @@ nav {
   border-radius: 24px !important;
   border: none;
   margin: 0.4em 2em;
-
 }
 
 .search-field {
@@ -72,16 +66,11 @@ nav {
   background-color: transparent;
   border: 1.5px solid rgba(255, 255, 255, 0.3);
   color: white;
-  /* border: none; */
   border-radius: 24px;
   width: 100%;
   padding: 0.4em 3em;
   font-size: 1.1em
 }
-
-/* .search-btn:hover {
-
-} */
 
 .btn {
   background-color: rgb(255, 255, 255);
@@ -91,11 +80,6 @@ nav {
   margin-bottom: 5px;
   width: 100%;
 }
-
-/* .btn:hover {
-background-image: linear-gradient(lightblue, rgb(97, 154, 230));
-color: #3383E9
-} */
 
 .iconCityDate {
   display: flex;
@@ -115,7 +99,6 @@ color: #3383E9
   flex-direction: column;
   width: 60%;
 }
-
 
 #tempLogo,
 #windyLogo,
@@ -138,7 +121,6 @@ color: #3383E9
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-right: 5%; */
 }
 
 #humidity {
@@ -152,7 +134,6 @@ color: #3383E9
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-left: 10%; */
 }
 
 #temp {
@@ -179,10 +160,6 @@ color: #3383E9
   display: flex;
   flex-direction: row;
 }
-
-/* .windyLogo  {
-  margin-top: 2%;
-} */
 
 h1 {
   font-size: 30px;
@@ -240,8 +217,6 @@ h3 {
   border: none !important;
   border-radius: 15px;
   color: white;
-  /* padding-left: 10em;
-  padding-right: 10em; */
   min-height: 300px;
 }
 
@@ -257,7 +232,6 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* margin-right: 18em; */
   margin-top: -2%;
   margin-left: 6em;
   height: 100px;
@@ -277,19 +251,6 @@ h3 {
   margin-bottom: 1% !important;
 }
 
-/* .cityTemp p {
-  text-align: center;
-} */
-
-/* .cityTemp h1 {
-  text-align: center;
-} */
-
 .mt-5 {
   margin-left: 235px;
 }
-
-/* .icon {
-  display:flex;
-  justify-content: center;
-} */
