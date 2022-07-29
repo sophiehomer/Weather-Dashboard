@@ -10,6 +10,7 @@ body {
   background-position: center; /* Center the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   color: white;
+  letter-spacing: .03em
 }
 
 header {
@@ -43,6 +44,9 @@ nav {
 
 #enter-city {
   border-radius: 24px !important;
+  border: none;
+  margin: 0.4em 2em;
+
 }
 
 .search-field {
@@ -55,24 +59,24 @@ nav {
 .search-btn {
   margin-top: 10px;
   background-color: transparent;
-  border: 2px solid white !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
   color: white;
-  border: none;
   border-radius: 24px;
   width: 100%;
   padding-bottom: 5px;
-  padding: 0.5em 1em;
-  /* padding: .6em 1.5em; */
+  padding: 0.3em 5em;
+  font-size: 1.1em
 }
 
-button {
+.button {
   background-color: transparent;
-  border: 2px solid white !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
   color: white;
-  border: none;
+  /* border: none; */
   border-radius: 24px;
   width: 100%;
-  padding: 0.5em 1em;
+  padding: 0.4em 3em;
+  font-size: 1.1em
 }
 
 /* .search-btn:hover {
@@ -93,10 +97,17 @@ background-image: linear-gradient(lightblue, rgb(97, 154, 230));
 color: #3383E9
 } */
 
-.cityDate {
+.iconCityDate {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+}
+
+.dateCityContainer {
+  margin-left: 15em;
+}
+
+#firstDate {
+  margin-bottom: 0% !important;
 }
 
 .container-days {
@@ -127,7 +138,7 @@ color: #3383E9
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 5%;
+  /* margin-right: 5%; */
 }
 
 #humidity {
@@ -141,7 +152,7 @@ color: #3383E9
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 10%;
+  /* margin-left: 10%; */
 }
 
 #temp {
@@ -221,7 +232,7 @@ h3 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; 
-  background-size: 500px;
+  background-size: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -229,8 +240,8 @@ h3 {
   border: none !important;
   border-radius: 15px;
   color: white;
-  padding-left: 10em;
-  padding-right: 10em;
+  /* padding-left: 10em;
+  padding-right: 10em; */
   min-height: 300px;
 }
 
@@ -238,14 +249,19 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 10em;
+  padding-right: 8em;
 }
 
 #iconOne {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  /* margin-right: 18em; */
+  margin-top: -2%;
+  margin-left: 6em;
+  height: 100px;
+  width: 100px;
 }
 
 #iconTwo,
@@ -257,7 +273,7 @@ h3 {
 }
 
 #city {
-  font-size: 1.5em;
+  font-size: 1.7em;
   margin-bottom: 1% !important;
 }
 
