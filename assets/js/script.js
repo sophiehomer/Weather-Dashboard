@@ -7,13 +7,17 @@ var displaySecondDate = document.getElementById("secondDate")
 var displayThirdDate = document.getElementById("thirdDate");
 var displayFourthDate = document.getElementById("fourthDate");
 var displayFifthDate = document.getElementById("fifthDate");
+console.log("line 10", displayFifthDate);
 var displaySixthDate = document.getElementById("sixthDate");
+console.log("line 12", displaySixthDate);
+
 /* ---------------------------------- DATES --------------------------------- */
 var dayOne = moment().format("MM/DD/YYYY")
 var dayTwo = moment().add(1, 'days').format("MM/DD/YYYY")
 var dayThree = moment().add(2, 'days').format("MM/DD/YYYY")
 var dayFour = moment().add(3, 'days').format("MM/DD/YYYY")
 var dayFive = moment().add(4, 'days').format("MM/DD/YYYY")
+console.log(dayFive, "line 20")
 var daySix = moment().add(5, 'days').format("MM/DD/YYYY")
 /* --------------------------------- DAY ONE CITY/TEMP/WIND/HUMIDITY -------------------------------- */
 var displayCity = document.getElementById("city");
@@ -120,7 +124,7 @@ $('#fetch-button').on('click', function() {
    localStorage.setItem("iconFour", "<img src='https://openweathermap.org/img/w/" + data.list[18].weather[0].icon + ".png>")
 
   /* ---------------------------------- DAY 5 SET ITEM --------------------------------- */
-
+  console.log("line 129", displayFifthDate)
    displayFifthDate.innerHTML = dayFive;
    tempFive.innerHTML= (data.list[26].main.temp + "°F");
    windFive.innerHTML= (data.list[26].wind.speed + "mph");
@@ -136,6 +140,8 @@ $('#fetch-button').on('click', function() {
   /* ---------------------------------- DAY 6 SET ITEM --------------------------------- */
 
    displaySixthDate.innerHTML = daySix;
+   console.log("line 143", displaySixthDate);
+
    $("#iconSix").html("<img src='https://openweathermap.org/img/w/" + data.list[34].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
    tempSix.innerHTML= (data.list[34].main.temp + "°F");
    windSix.innerHTML= (data.list[34].wind.speed + "mph");
@@ -223,9 +229,10 @@ $('#fetch-button').on('click', function() {
  
   /* ---------------------------------- DAY 5 GET ITEM --------------------------------- */
 
-   var displayDayFive = localStorage.getItem("dateFive");
-   displayfifthDate.innerHTML = displayDayFive;
-
+   var displayDayFive = localStorage.getItem("datefive");
+   console.log("line223", displayDayFive)
+   displayFifthDate.innerHTML = displayDayFive;
+  console.log("line 231", displayFifthDate)
    var displayTempFive = localStorage.getItem("tempFive");
    tempFive.innerHTML = displayTempFive;
  
@@ -241,7 +248,7 @@ $('#fetch-button').on('click', function() {
   /* ---------------------------------- DAY 6 GET ITEM --------------------------------- */
 
   var displayDaySix = localStorage.getItem("dateSix");
-   displayDaySixthDate.innerHTML = displayDaySix;
+   displaySixthDate.innerHTML = displayDaySix;
 
    var displayTempSix = localStorage.getItem("tempSix");
    tempSix.innerHTML = displayTempSix;
